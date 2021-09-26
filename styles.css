@@ -1,6 +1,7 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
+    background: darkcyan;
 }
 
 ul {
@@ -24,11 +25,17 @@ ul li {
     flex-wrap: wrap; */
     padding: 10px 50px 10px 50px;
     margin: 3px;
+    border-radius: 10px;
 }
 
 nav {
     display: flex;
     justify-content: center;
+    padding: 50px;
+    background-color: blanchedalmond;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 25px;
 }
 a {
     display: block;
@@ -44,4 +51,19 @@ a {
 a:hover {
     background-color: deepskyblue;
     color: black;
+}
+
+.radio-input {
+    background-color: #ebd8bc;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+input[type='radio'] { 
+    transform: scale(1.5); 
 }

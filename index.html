@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,20 +9,44 @@
     <script src="main.js" defer></script>
     <title>Epoki i gatunki literackie</title>
 </head>
+
 <body>
     <main>
         <nav>
-            <input type="radio" name="uczenie" id="epochs" value="epochs" checked>Epoki
-            <input type="radio" name="uczenie" id="genres" value="genres">Gatunki
-            <input type="radio" name="uczenie" id="kinds" value="kinds">Rodzaje
-            <input type="radio" name="uczenie" id="authors" value="authors">Autory
-            <input type="radio" name="uczenie" id="themes" value="themes">Tematy
-            <input type="radio" name="uczenie" id="collections" value="collections">Kolekcje
-            <input type="radio" name="uczenie" id="books" value="books">Utwory
+            <div class="radio-input">
+                <label for="epochs">Epoki</label>
+                <input type="radio" name="uczenie" id="epochs" value="epochs" checked>
+            </div>
+            <div class="radio-input">
+                <label for="genres">Gatunki</label>
+                <input type="radio" name="uczenie" id="genres" value="genres">
+            </div class="radio-input">
+            <div class="radio-input">
+                <label for="kinds">Rodzaje</label>
+                <input type="radio" name="uczenie" id="kinds" value="kinds">
+            </div>
+            <div class="radio-input">
+                <label for="authors">Autory</label>
+                <input type="radio" name="uczenie" id="authors" value="authors">
+            </div>
+            <div class="radio-input">
+                <label for="themes">Tematy</label>
+                <input type="radio" name="uczenie" id="themes" value="themes">
+            </div>
+            <div class="radio-input">
+                <label for="collections">Kolekcje</label>
+                <input type="radio" name="uczenie" id="collections" value="collections">
+            </div>
+            <div class="radio-input">
+                <label for="books">Utwory</label>
+                <input type="radio" name="uczenie" id="books" value="books">
+            </div>
+
         </nav>
         <section class="section">
             <ul id="lista"></ul>
         </section>
     </main>
 </body>
+
 </html>
