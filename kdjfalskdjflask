@@ -1,115 +1,0 @@
-[1mdiff --git a/index.html b/index.html[m
-[1mindex ac701db..8fb7e45 100644[m
-[1m--- a/index.html[m
-[1m+++ b/index.html[m
-[36m@@ -1,5 +1,6 @@[m
- <!DOCTYPE html>[m
- <html lang="en">[m
-[32m+[m[41m[m
- <head>[m
-     <meta charset="UTF-8">[m
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
-[36m@@ -8,20 +9,44 @@[m
-     <script src="main.js" defer></script>[m
-     <title>Epoki i gatunki literackie</title>[m
- </head>[m
-[32m+[m[41m[m
- <body>[m
-     <main>[m
-         <nav>[m
-[31m-            <input type="radio" name="uczenie" id="epochs" value="epochs" checked>Epoki[m
-[31m-            <input type="radio" name="uczenie" id="genres" value="genres">Gatunki[m
-[31m-            <input type="radio" name="uczenie" id="kinds" value="kinds">Rodzaje[m
-[31m-            <input type="radio" name="uczenie" id="authors" value="authors">Autory[m
-[31m-            <input type="radio" name="uczenie" id="themes" value="themes">Tematy[m
-[31m-            <input type="radio" name="uczenie" id="collections" value="collections">Kolekcje[m
-[31m-            <input type="radio" name="uczenie" id="books" value="books">Utwory[m
-[32m+[m[32m            <div class="radio-input">[m[41m[m
-[32m+[m[32m                <label for="epochs">Epoki</label>[m[41m[m
-[32m+[m[32m                <input type="radio" name="uczenie" id="epochs" value="epochs" checked>[m[41m[m
-[32m+[m[32m            </div>[m[41m[m
-[32m+[m[32m            <div class="radio-input">[m[41m[m
-[32m+[m[32m                <label for="genres">Gatunki</label>[m[41m[m
-[32m+[m[32m                <input type="radio" name="uczenie" id="genres" value="genres">[m[41m[m
-[32m+[m[32m            </div class="radio-input">[m[41m[m
-[32m+[m[32m            <div class="radio-input">[m[41m[m
-[32m+[m[32m                <label for="kinds">Rodzaje</label>[m[41m[m
-[32m+[m[32m                <input type="radio" name="uczenie" id="kinds" value="kinds">[m[41m[m
-[32m+[m[32m            </div>[m[41m[m
-[32m+[m[32m            <div class="radio-input">[m[41m[m
-[32m+[m[32m                <label for="authors">Autory</label>[m[41m[m
-[32m+[m[32m                <input type="radio" name="uczenie" id="authors" value="authors">[m[41m[m
-[32m+[m[32m            </div>[m[41m[m
-[32m+[m[32m            <div class="radio-input">[m[41m[m
-[32m+[m[32m                <label for="themes">Tematy</label>[m[41m[m
-[32m+[m[32m                <input type="radio" name="uczenie" id="themes" value="themes">[m[41m[m
-[32m+[m[32m            </div>[m[41m[m
-[32m+[m[32m            <div class="radio-input">[m[41m[m
-[32m+[m[32m                <label for="collections">Kolekcje</label>[m[41m[m
-[32m+[m[32m                <input type="radio" name="uczenie" id="collections" value="collections">[m[41m[m
-[32m+[m[32m            </div>[m[41m[m
-[32m+[m[32m            <div class="radio-input">[m[41m[m
-[32m+[m[32m                <label for="books">Utwory</label>[m[41m[m
-[32m+[m[32m                <input type="radio" name="uczenie" id="books" value="books">[m[41m[m
-[32m+[m[32m            </div>[m[41m[m
-[32m+[m[41m[m
-         </nav>[m
-         <section class="section">[m
-             <ul id="lista"></ul>[m
-         </section>[m
-     </main>[m
- </body>[m
-[32m+[m[41m[m
- </html>[m
-\ No newline at end of file[m
-[1mdiff --git a/styles.css b/styles.css[m
-[1mindex 6e26c8b..39741c3 100644[m
-[1m--- a/styles.css[m
-[1m+++ b/styles.css[m
-[36m@@ -1,6 +1,7 @@[m
- body {[m
-     font-family: 'Times New Roman', Times, serif;[m
-     font-size: 20px;[m
-[32m+[m[32m    background: darkcyan;[m[41m[m
- }[m
- [m
- ul {[m
-[36m@@ -24,11 +25,17 @@[m [mul li {[m
-     flex-wrap: wrap; */[m
-     padding: 10px 50px 10px 50px;[m
-     margin: 3px;[m
-[32m+[m[32m    border-radius: 10px;[m[41m[m
- }[m
- [m
- nav {[m
-     display: flex;[m
-     justify-content: center;[m
-[32m+[m[32m    padding: 50px;[m[41m[m
-[32m+[m[32m    background-color: blanchedalmond;[m[41m[m
-[32m+[m[32m    max-width: 600px;[m[41m[m
-[32m+[m[32m    margin: 0 auto;[m[41m[m
-[32m+[m[32m    border-radius: 25px;[m[41m[m
- }[m
- a {[m
-     display: block;[m
-[36m@@ -44,4 +51,19 @@[m [ma {[m
- a:hover {[m
-     background-color: deepskyblue;[m
-     color: black;[m
-[32m+[m[32m}[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m.radio-input {[m[41m[m
-[32m+[m[32m    background-color: #ebd8bc;[m[41m[m
-[32m+[m[32m    margin: 5px;[m[41m[m
-[32m+[m[32m    padding: 10px;[m[41m[m
-[32m+[m[32m    border-radius: 5px;[m[41m[m
-[32m+[m[32m    display: flex;[m[41m[m
-[32m+[m[32m    flex-direction: column;[m[41m[m
-[32m+[m[32m    align-items: center;[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m}[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32minput[type='radio'] {[m[41m [m
-[32m+[m[32m    transform: scale(1.5);[m[41m [m
- }[m
-\ No newline at end of file[m
