@@ -1,0 +1,47 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul li {
+    width: 600px;
+    min-height: 60px;
+    background-color:blanchedalmond;
+
+    max-width: 400px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; */
+    padding: 10px 50px 10px 50px;
+    margin: 3px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+a {
+    display: block;
+    background-color: mediumseagreen;
+    color:midnightblue;
+
+    text-decoration: none;
+    padding: 10px;
+    
+
+}
+
+a:hover {
+    background-color: deepskyblue;
+    color: black;
+}
