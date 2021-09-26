@@ -31,6 +31,7 @@ ul li {
 nav {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 50px;
     background-color: blanchedalmond;
     max-width: 600px;
