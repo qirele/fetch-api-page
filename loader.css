@@ -5,6 +5,8 @@
     animation: rotate 3s linear infinite;
     display: none;
     opacity: 0;
+    position: relative;
+    bottom: 150px;
 }
 
 .circle {
