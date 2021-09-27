@@ -1,6 +1,7 @@
 // https://wolnelektury.pl/api/epochs/?format=json
 
 lista = document.querySelector('#lista');
+loader = document.querySelector('.loader');
 radios = Array.from(document.querySelectorAll('input[type="radio"]'));
 for (element of radios){
     element.onchange = function(e){
@@ -15,6 +16,8 @@ function updateDisplay(name){
     while (lista.firstChild) lista.removeChild(lista.firstChild);
 
     url = 'https://wolnelektury.pl/api/' + name + '/?format=json';
+    loader.style.opacity = 1;
+    loader.style.display = 'block';
     fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -37,6 +40,9 @@ function updateDisplay(name){
             li = document.createElement("li");
             li.innerHTML = kontent; 
             lista.appendChild(li);
+            loader.style.opacity = 0;
+            loader.style.display = 'none';
+            
         }
         
     });

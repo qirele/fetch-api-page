@@ -17,12 +17,7 @@ ul li {
     width: 600px;
     min-height: 60px;
     background-color:blanchedalmond;
-
     max-width: 400px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; */
     padding: 10px 50px 10px 50px;
     margin: 3px;
     border-radius: 10px;
@@ -42,11 +37,8 @@ a {
     display: block;
     background-color: mediumseagreen;
     color:midnightblue;
-
     text-decoration: none;
     padding: 10px;
-    
-
 }
 
 a:hover {
@@ -65,6 +57,18 @@ a:hover {
 
 }
 
-input[type='radio'] { 
+input[type='radio'] {
     transform: scale(1.5); 
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section h1 {
+    text-align: center;
+    color: blanchedalmond;
 }
