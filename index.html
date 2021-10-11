@@ -6,53 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="test-style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
-    <title>Epoki i gatunki literackie</title>
+    <title>Szukaj bezpłatne literatury</title>
 </head>
 
 <body>
-    <main>
-        <nav>
-            <h1>Które chcesz informacje na temat literatury?</h1>
-            <div class="radio-input">
-                <label for="epochs">Epoki</label>
-                <input type="radio" name="uczenie" id="epochs" value="epochs" checked>
-            </div>
-            <div class="radio-input">
-                <label for="genres">Gatunki</label>
-                <input type="radio" name="uczenie" id="genres" value="genres">
-            </div>
-            <div class="radio-input">
-                <label for="kinds">Rodzaje</label>
-                <input type="radio" name="uczenie" id="kinds" value="kinds">
-            </div>
-            <div class="radio-input">
-                <label for="authors">Autory</label>
-                <input type="radio" name="uczenie" id="authors" value="authors">
-            </div>
-            <div class="radio-input">
-                <label for="themes">Tematy</label>
-                <input type="radio" name="uczenie" id="themes" value="themes">
-            </div>
-            <div class="radio-input">
-                <label for="collections">Kolekcje</label>
-                <input type="radio" name="uczenie" id="collections" value="collections">
-            </div>
-            <div class="radio-input">
-                <label for="books">Utwory</label>
-                <input type="radio" name="uczenie" id="books" value="books">
-            </div>
+    <main class="container">
+        <section class="my-5">
+            <h1 >Kliknij w przycisk aby dowiedzieć się więcej</h1>
+            <nav class="d-flex">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="btn btn-info me-1" id="genres" value="genres">Gatunki</button>
+                    <button class="btn btn-info me-1" id="authors" value="authors">Autory</button>
+                    <button class="btn btn-info" id="books" value="books">Utwory</button>
+                </div>
+                
+            </nav>
+        </section>
 
-        </nav>
-        <section class="section">
-            <h1>Le informacje: </h1>
+        <section class="my-5">
+            <h2>Filtruj</h2>
+            <input type="search" name="q" class="form-control" id="search-filter" placeholder="Zacznij pisać tu" autocomplete="off">
+        </section>
+        <section>
+            <h3>Wynik zapytania: </h3>
+            <nav id="pageNumbers"></nav>
             <div class="loader">
                 <div class="circle"></div>
                 <div class="circle"></div>
             </div>
-            <ul id="lista"></ul>
+            <ul id="json-output"></ul>
         </section>
     </main>
 </body>

@@ -1,4 +1,4 @@
-body {
+ body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     background: darkcyan;
@@ -23,7 +23,7 @@ ul li {
     border-radius: 10px;
 }
 
-nav {
+.main-nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -59,16 +59,20 @@ a:hover {
 
 input[type='radio'] {
     transform: scale(1.5); 
-}
+} 
 
-.section {
+
+/* that section tag is  for loading animation to work */
+section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.section h1 {
+section h1 {
     text-align: center;
     color: blanchedalmond;
 }
+
+/* TODO: (Kiril) fix layout on phones */

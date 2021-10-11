@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- <link rel="stylesheet" href="test-style.css"> -->
+    <link rel="stylesheet" href="loader.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="main.js" defer></script>
+    <title>Epoki i gatunki literackie</title>
+</head>
+
+<body>
+    <div class="container">
+        <main>
+            <section class="container">
+                <h1>Click the radio buttons to see more</h1>
+                <nav class="d-flex">
+                    <div class="">
+                        <label for="epochs">Epoki</label>
+                        <input type="radio" name="uczenie" id="epochs" value="epochs" checked>
+                    </div>
+                    <div class="">
+                        <label for="genres">Gatunki</label>
+                        <input type="radio" name="uczenie" id="genres" value="genres">
+                    </div>
+                    <div class="">
+                        <label for="kinds">Rodzaje</label>
+                        <input type="radio" name="uczenie" id="kinds" value="kinds">
+                    </div>
+                    <div class="">
+                        <label for="authors">Autory</label>
+                        <input type="radio" name="uczenie" id="authors" value="authors">
+                    </div>
+                    <div class="">
+                        <label for="themes">Tematy</label>
+                        <input type="radio" name="uczenie" id="themes" value="themes">
+                    </div>
+                    <div class="">
+                        <label for="collections">Kolekcje</label>
+                        <input type="radio" name="uczenie" id="collections" value="collections">
+                    </div>
+                    <div class="">
+                        <label for="books">Utwory</label>
+                        <input type="radio" name="uczenie" id="books" value="books">
+                    </div>
+                </nav>
+            </section>
+            <section class="container">
+                <h2>Search</h2>
+                <input type="search" name="q" id="search-filter" placeholder="Start typing here">
+            </section>
+            <section class="container">
+                <h3>Here's what you ordered: </h3>
+                    <nav id="pageNumbers"></nav>
+                    <div class="loader">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <ul id="json-output"></ul>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>
