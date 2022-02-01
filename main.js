@@ -2,11 +2,11 @@
 
 let lista = document.querySelector('#json-output');
 let loader = document.querySelector('.loader');
-let buttons = Array.from(document.querySelectorAll('button.btn'));
+let fetchButtons = Array.from(document.querySelectorAll('#navigation button.btn'));
 let pageButtonsNav = document.querySelector('#pageNumbers');
 let prevFetch;
 
-for (element of buttons){
+for (element of fetchButtons){
     element.onclick = function(e){
         if (prevFetch != e.target.value) fetchAndUpdate(e.target.value);
         prevFetch = e.target.value;
@@ -35,11 +35,13 @@ function fetchAndUpdate(endpoint){
             });
             btn.innerText = i + 1;
             pageButtonsNav.appendChild(btn);
-            $("#pageNumbers button").addClass("btn btn-primary");
+            
             
         }
         updateDisplay(paginatedItems[0]); // show the first page instantly without waiting for a click
+        $("#pageNumbers button").addClass("btn btn-primary");
     });
+    
 }
 
 function updateDisplay(data){
@@ -51,7 +53,7 @@ function updateDisplay(data){
     }
 }
 
-// search-filter logic
+// search-filter logic ===== for this to work u need to add display: none; to li.hide in a stylesheet
 let searchInput = document.querySelector('#search-filter');
 searchInput.addEventListener('keyup', function() {
     let term = searchInput.value.toLowerCase();
@@ -71,7 +73,7 @@ searchInput.addEventListener('keyup', function() {
 
 
 
-fetchAndUpdate('epochs');
+fetchAndUpdate('epochs'); 
 
 function sliceData(data){
     let chunk = 100;
@@ -89,8 +91,6 @@ function generateDescription(element){
         `Tytuł: <b>${element.title}</b><br>
         Autor: <em>${element.author}</em><br>
         <a target='_blank' href='${element.url}'>Czytaj</a>`;
-    else if (element.title && !element.name) // this if is meant only for the collections endpoint
-        kontent = element.title;
     else // this is the rest of the endpoints
         kontent = element.name;
     return kontent;
